@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Catan Randomizer</title>
+</head>
+
+<body>
+    <h1>Catan Randomizer</h1>
+    <label for="gametype">Game Type</label>
+    <select name="gametype" id="gametype">
+        <option value="base">Basic Catan</option>
+        <option value="seafarers-newshores">Seafarers New Shores</option>
+        <!-- <option value="seafarers-fourislands">Seafarers Four Islands</option> -->
+        <!-- <option value="seafarers-fogislands">Seafarers Fog Islands</option> -->
+        <option value="seafarers-fullrandom">Seafarers New World</option>
+        <option value="seafarers-fullrandommega">Seafarers New World Mega</option>
+    </select>
+
+    <label for="playernumber">Player Count</label>
+    <select name="playernumber" id="playernumber">
+        <option value="3">3</option>
+        <option value="4">4</option>
+    </select>
+    
+    <br/>
+    <canvas id="hexCanvas"></canvas>
+
+    <br/>
+    <button id = "reroll">Reroll</button>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
