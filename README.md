@@ -15,6 +15,7 @@ Currently Supported Modes:
 <h3>To Add In Future</h3>
 <ul>
   <li>Rest of the Seafarers Modes</li>
+  <li>Seafarers Fog Islands Tile Picker</li>
   <li>Harbor Placement</li>
   <li>Other Expansions</li>
   <li>5-6 Player Support</li>
