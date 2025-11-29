@@ -7,16 +7,38 @@ body {
     background-color: #f0f0f0;
 }
 
-.reroll, svg{
+.reroll,
+svg {
     margin: 1em;
 }
 
-#colors{
+.colors {
     margin-top: 1em;
     justify-content: center;
+
 }
 
-.color{
+@media (orientation: portrait) {
+    .colors {
+        display: flex;
+    }
+
+    .sidebar {
+        display: none;
+    }
+}
+
+@media (orientation: landscape) {
+    .colors {
+        display: none;
+    }
+
+    .sidebar {
+        display: flex;
+    }
+}
+
+.color {
     width: 5em;
     height: 5em;
     margin: .5em;
@@ -25,4 +47,14 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
+}
+
+.sidebar {
+    @media(orientation: portrait) {
+        display: none;
+    }
+
+    @media(orientation: landscape) {
+        display: flex;
+    }
 }

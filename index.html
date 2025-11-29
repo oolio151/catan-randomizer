@@ -34,14 +34,14 @@
 
     <br />
     <div id="fancy" style="display: flex; justify-content: center; ">
-        <div class="sidebar" style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="sidebar" style="flex-direction: column; justify-content: center;">
             <div class="color" style="background-color: #00ac48ff">Pasture</div>
             <div class="color" style="background-color: #005716ff">Forest</div>
             <div class="color" style="background-color: #a67700ff">Hills</div>
             <div class="color" style="background-color: #797979ff">Mountain</div>
         </div>
         <canvas id="hexCanvas"></canvas>
-        <div class="sidebar" style="display: flex; flex-direction: column; justify-content: center;">
+        <div class="sidebar" style="flex-direction: column; justify-content: center;">
             <div class="color" style="background-color: #f6ff00ff; color: black">Field</div>
             <div class="color" style="background-color: #f4ffccff; color: black;">Desert</div>
             <div class="color" style="background-color: #ffae00ff">Gold Field</div>
@@ -57,18 +57,19 @@
                 d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
         </svg></button>
 
-
-    <div id="colors" style="display: none;">
+    <div class="colors"">
         <div class="color" style="background-color: #00ac48ff">Pasture</div>
         <div class="color" style="background-color: #005716ff">Forest</div>
         <div class="color" style="background-color: #a67700ff">Hills</div>
         <div class="color" style="background-color: #797979ff">Mountain</div>
-        <div class="color" style="background-color: #f6ff00ff">Field</div>
-        <div class="color" style="background-color: #f4ffccff">Desert</div>
+    </div>
+    <div class="colors">
+        <div class="color" style="background-color: #f6ff00ff; color: black;">Field</div>
+        <div class="color" style="background-color: #f4ffccff; color:black">Desert</div>
         <div class="color" style="background-color: #ffae00ff">Gold Field</div>
         <div class="color" style="background-color: #28a0ebff">Water</div>
     </div>
+    </div>
     <script src="index.js"></script>
 </body>
-
 </html>
