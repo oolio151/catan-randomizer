@@ -3,5 +3,26 @@
 body {
     font-family: 'JetBrains Mono', monospace;
     text-align: center;
+
     background-color: #f0f0f0;
+}
+
+.reroll, svg{
+    margin: 1em;
+}
+
+#colors{
+    margin-top: 1em;
+    justify-content: center;
+}
+
+.color{
+    width: 5em;
+    height: 5em;
+    margin: .5em;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }

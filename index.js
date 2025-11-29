@@ -4,6 +4,9 @@ const padding = 20;
 const canvas = document.getElementById("hexCanvas");
 const ctx = canvas.getContext("2d");
 
+const pcl = document.getElementById("pcl");
+
+
 const pasture = "#00ac48ff";
 const forest = "#005716ff";
 const hills = "#a67700ff";
@@ -182,6 +185,24 @@ function generateGrid(A, B, C, labelPool, colorPool, forcedTiles = []) {
 //r - positive means down diagonally to the right
 //lock in gang
 gametype.addEventListener("change", () => {
+    console.log("Generating grid for game type", gametype.value, "for", fourPlayer ? "4" : "3", "players");
+    
+    if (
+        gametype.value === "base"
+        || gametype.value === "seafarers-fullrandom"
+        || gametype.value === "seafarers-fullrandommega"
+        || gametype.value === "seafarers-cloth"
+        || gametype.value === "seafarers-pirateislands"
+        || gametype.value === "seafarers-wonders"
+        || gametype.value === "seafarers-forgottentribe"
+    ){
+        pcl.style.display = "none";
+        playerCountButton.style.display = "none";
+    } else {
+        pcl.style.display = "inline";
+        playerCountButton.style.display = "inline";
+    }
+    
     switch (gametype.value) {
 
         case "base":
@@ -272,7 +293,70 @@ gametype.addEventListener("change", () => {
                     ]
                 );
             break;
-
+        case "seafarers-fourislands":
+            if (fourPlayer)
+                generateGrid(
+                    4, 4, 4,
+                    [
+                        ["2", 1], ["3", 2], ["4", 3], ["5", 3],
+                        ["6", 2], ["8", 2], ["9", 3], ["10", 3],
+                        ["11", 3], ["12", 1],
+                    ],
+                    [
+                        [pasture, 5, true],
+                        [forest, 5, true],
+                        [hills, 4, true],
+                        [mountain, 4, true],
+                        [wheat, 5, true],
+                    ],
+                    [{ q: 1, r: 0, color: water, allowLabel: false },
+                    { q: 2, r: 0, color: water, allowLabel: false },
+                    { q: 0, r: 1, color: water, allowLabel: false },
+                    { q: 0, r: 2, color: water, allowLabel: false },
+                    { q: -1, r: 3, color: water, allowLabel: false },
+                    { q: -1, r: 1, color: water, allowLabel: false },
+                    { q: -1, r: 0, color: water, allowLabel: false },
+                    { q: -2, r: 0, color: water, allowLabel: false },
+                    { q: -3, r: 0, color: water, allowLabel: false },
+                    { q: 0, r: -1, color: water, allowLabel: false },
+                    { q: 0, r: -2, color: water, allowLabel: false },
+                    { q: 1, r: -3, color: water, allowLabel: false },
+                    { q: 3, r: -1, color: water, allowLabel: false },
+                    ]
+                );
+            else
+                generateGrid(
+                    4, 4, 4,
+                    [
+                        ["2", 1], ["3", 2], ["4", 2], ["5", 3],
+                        ["6", 2], ["8", 2], ["9", 3], ["10", 2],
+                        ["11", 2], ["12", 1],
+                    ],
+                    [
+                        [pasture, 4, true],
+                        [forest, 4, true],
+                        [hills, 4, true],
+                        [mountain, 4, true],
+                        [wheat, 4, true],
+                    ],
+                    [{ q: 0, r: 0, color: water, allowLabel: false },
+                    { q: 2, r: 0, color: water, allowLabel: false },
+                    { q: 1, r: 0, color: water, allowLabel: false },
+                    { q: -1, r: 0, color: water, allowLabel: false },
+                    { q: -2, r: 0, color: water, allowLabel: false },
+                    { q: 0, r: -1, color: water, allowLabel: false },
+                    { q: 1, r: -2, color: water, allowLabel: false },
+                    { q: 1, r: -3, color: water, allowLabel: false },
+                    { q: 0, r: -3, color: water, allowLabel: false },
+                    { q: 0, r: 1, color: water, allowLabel: false },
+                    { q: 3, r: -1, color: water, allowLabel: false },
+                    { q: -1, r: 2, color: water, allowLabel: false },
+                    { q: -2, r: 3, color: water, allowLabel: false },
+                    { q: -1, r: 3, color: water, allowLabel: false },
+                    { q: 0, r: 3, color: water, allowLabel: false },
+                    ]
+                );
+            break;
         case "seafarers-fullrandom":
             generateGrid(
                 4, 5, 4,

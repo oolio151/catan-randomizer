@@ -13,25 +13,61 @@
     <label for="gametype">Game Type</label>
     <select name="gametype" id="gametype">
         <option value="base">Basic Catan</option>
-        <option value="seafarers-newshores">Seafarers New Shores</option>
-        <!-- <option value="seafarers-fourislands">Seafarers Four Islands</option> -->
-        <!-- <option value="seafarers-fogislands">Seafarers Fog Islands</option> -->
+        <option value="seafarers-newshores">Seafarers Heading For New Shores</option>
+        <option value="seafarers-fourislands">Seafarers Four Islands</option>
+        <option value="seafarers-fogislands" disabled>Seafarers Fog Islands</option>
+        <option value="seafarers-throughthedesert" disabled>Seafareres Through The Desert</option>
+        <option value="seafarers-forgottentribe" disabled>Seafarers The Forgotten Tribe</option>
+        <option value="seafarers-cloth" disabled>Seafarers Cloth For Catan</option>
+        <option value="seafarers-pirateislands" disabled>Seafarers The Pirate Islands</option>
+        <option value="seafarers-wonders" disabled>Seafarers The Wonders of Catan</option>
         <option value="seafarers-fullrandom">Seafarers New World</option>
         <option value="seafarers-fullrandommega">Seafarers New World Mega</option>
     </select>
-
-    <label for="playernumber">Player Count</label>
+    <br /><br />
+    <label id="pcl" for="playernumber">Player Count</label>
     <select name="playernumber" id="playernumber">
         <option value="3">3</option>
         <option value="4">4</option>
+        <option value="5" disabled>5-6</option>
     </select>
-    
-    <br/>
-    <canvas id="hexCanvas"></canvas>
 
-    <br/>
-    <button id = "reroll">Reroll</button>
+    <br />
+    <div id="fancy" style="display: flex; justify-content: center; ">
+        <div class="sidebar" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="color" style="background-color: #00ac48ff">Pasture</div>
+            <div class="color" style="background-color: #005716ff">Forest</div>
+            <div class="color" style="background-color: #a67700ff">Hills</div>
+            <div class="color" style="background-color: #797979ff">Mountain</div>
+        </div>
+        <canvas id="hexCanvas"></canvas>
+        <div class="sidebar" style="display: flex; flex-direction: column; justify-content: center;">
+            <div class="color" style="background-color: #f6ff00ff; color: black">Field</div>
+            <div class="color" style="background-color: #f4ffccff; color: black;">Desert</div>
+            <div class="color" style="background-color: #ffae00ff">Gold Field</div>
+            <div class="color" style="background-color: #28a0ebff">Water</div>
+        </div>
+    </div>
 
+    <br />
+    <button id="reroll"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+            <path
+                d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+        </svg></button>
+
+
+    <div id="colors" style="display: none;">
+        <div class="color" style="background-color: #00ac48ff">Pasture</div>
+        <div class="color" style="background-color: #005716ff">Forest</div>
+        <div class="color" style="background-color: #a67700ff">Hills</div>
+        <div class="color" style="background-color: #797979ff">Mountain</div>
+        <div class="color" style="background-color: #f6ff00ff">Field</div>
+        <div class="color" style="background-color: #f4ffccff">Desert</div>
+        <div class="color" style="background-color: #ffae00ff">Gold Field</div>
+        <div class="color" style="background-color: #28a0ebff">Water</div>
+    </div>
     <script src="index.js"></script>
 </body>
 
