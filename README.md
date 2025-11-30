@@ -10,6 +10,7 @@ Currently Supported Modes:
   <li>Base Catan</li>
   <li>Seafarers - Heading For New Shores</li>
   <li>Seafarers - New World</li>
+  <li>Seafarers - Four Islands</li>
 </ul>
 <hr>
 <h3>To Add In Future</h3>
